@@ -20,7 +20,7 @@ Please read the terms of Finsify Hub's documents
 
 `Transaction` it provides information of each transaction from each `Account`.
 
-`Service` is service provided by Finsify Hub. It could be an ecommerce website, financial institution such as Paypal, Vietcombank, Maybank, etc.
+`Service` or `Merchant` is service provided by Finsify Hub. It could be an ecommerce website, financial institution such as Paypal, Vietcombank, Maybank, etc.
 
 ## Question?
 

@@ -2,7 +2,8 @@
 
 * [Introduction](/)
 * [Architecture](architecture.md)
-* [Authentication](authentication.md)
-* [API](api.md)
+* [Services](service.md)
+* [API v3](api.md)
+* [Encryption](encryption.md)
 * [Errors](errors.md)
 * [White Paper](white-paper.md)

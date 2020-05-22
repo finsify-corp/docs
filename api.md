@@ -8,7 +8,7 @@
 | DEV Host | https://trial-api.finsify.com |
 | Production Host | COMING SOON |
 | HTTPS protocol support | TLSv1.2, TLSv1.3 |
-| Postman sample | 	https://www.getpostman.com/collections/ecd23328e196864eb9a7 |
+| Postman sample | https://www.getpostman.com/collections/4d7f6e8ff52a5e7106bb |
 
 ## Request Crawler
 
@@ -129,10 +129,6 @@ curl -X POST 'https://trial-api.finsify.com/api/request' \
 ```
 
 ## Webhook
-
-#### Example
-
-https://requestbin.com/r/eno81q3kg0j5/1Sum0X6hL5DoUb1BNjpIJYn4ZAZ
 
 #### Event states of the crawler
 

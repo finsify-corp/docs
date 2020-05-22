@@ -42,7 +42,7 @@
 
 | Parameters | Type | Description | Required |
 |---|---|---|---|
-| credential | string/json | User credential sample: {"username":"moneylover", "password":"asdasdasd"} | Yes |
+| credentials | string/json | User credential sample: {"username":"moneylover", "password":"asdasdasd"} | Yes |
 | service_id | int | Service ID provided by Finsify. Read more [List of service](service.md) | Yes |
 | callback_url | string | Url for your webhook | Yes |
 | type | string | `manual` or `auto`. Manual for first time link and auto for getting transaction for linked account. Default is auto. Web hook will be sent In manual mode for every step, in auto mode only when completed. | Optional |

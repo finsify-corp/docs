@@ -142,16 +142,16 @@ curl -X POST 'https://trial-api.finsify.com/api/request' \
 | request.successful | Task completed, you can received data in this event|
 
 
-Sample hook
+#### Data sample
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "request.ready"
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -162,7 +162,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.request",
@@ -172,7 +172,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -183,7 +183,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -194,7 +194,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -205,7 +205,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -216,7 +216,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -227,7 +227,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -238,14 +238,14 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.successful"
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "merchant.progress",
@@ -256,7 +256,7 @@ Sample hook
 }
 ```
 
-```
+```json
 {
     "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
     "event": "request.successful",

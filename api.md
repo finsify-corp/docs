@@ -138,3 +138,21 @@ curl -X DELETE \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache'
 ```
+
+## Sent OTP, secret password
+
+### Method
+
+|  |  |
+|---|---|
+| Base path	| /api/request/{requestID}/otp |
+| HTTP method | PUT |
+| Content-Type | application/json |
+
+### Body
+
+```
+{
+ "otp": "1234"
+}
+```

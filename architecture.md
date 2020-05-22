@@ -13,6 +13,7 @@
 - merchant.request: Request for otp, secret password
 - merchant.progress: Current state of the crawler.
 - merchant.successful: Crawler completed successful.
+- request.successful: Request completed successful.
 
 ### Router listen events
 

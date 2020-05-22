@@ -151,6 +151,8 @@ curl -X DELETE \
 
 ### Body
 
+Encrypted using the same method as above. sample unencrypt data:
+
 ```
 {
  "otp": "1234"
@@ -159,10 +161,34 @@ curl -X DELETE \
 
 ### Sample
 
+Sample unencrypted on test server:
+
 ```bash
-curl -X PUT 'https://trial-api.finsify.com/api/request/c026a1e3-978f-4fac-b0b2-0b58440a6b19/otp' \
+curl --location --request PUT 'https://trial-api.finsify.com/api/request/9763e0c1-250b-4542-93d3-7d61987551c0/otp' \
+--header 'X-CLIENT-ID: c1759de2' \
+--header 'x-customer-id: 001' \
+--header 'encrypted: 0' \
 --header 'Content-Type: application/json' \
 --data-raw '{
- "otp": "7863"
+ "otp": "1234"
+}'
+```
+
+Sample encrypted data request:
+
+```bash
+curl --location --request PUT 'https://trial-api.finsify.com/api/request/9763e0c1-250b-4542-93d3-7d61987551c0/otp' \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 733' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: dev-toss.integrated.finsify.com' \
+  -H 'cache-control: no-cache' \
+  -H 'encrypted: 1' \
+  -d '{
+"data": "0f0990a27e153b5fd26581d3f317e4c35e8a741138fb3c0633f818f1eb8f299c9bcb019351da22fae0d5f06178f144477951a14f2c14ed4aa2f7ba1ca689dfb040b04e755bf51426a0e93403a084379af692c602f7889bd3345345345",
+"key": "L5NqVfGdwAD10jvXUIqRDf3X8gMDTAENABDzWxj4NSXCeEURWc53HHzqylmvvExdvvYX0aFVa38IH4vk1qbQT3Cuv9HFPC477WTrrj+o9+2+Qn5TbS1WpNzboHwOl3wz1x9Om4TH78hwNkY8dH5LYyKe4GpEc8zsDYhF8+rOZe+GQjX8lWhZJ4pr+bkuc0nLvEyAwCfU3pEQuIIRfFdgvMGnnXr5+4XSntTBDQ60k/ctkIwSpvsZ1fcwdSG70PmcK6vX+Iq+ZEPkKVjR2hBshX21f0jGZ3Yxnu343cgnqFiHIEHbZiPD+cuNUe5PmDWcIcz8IT+ccyExSfBsl1dNPQ=="
 }'
 ```

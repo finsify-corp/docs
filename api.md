@@ -156,3 +156,13 @@ curl -X DELETE \
  "otp": "1234"
 }
 ```
+
+### Sample
+
+```bash
+curl -X PUT 'https://trial-api.finsify.com/api/request/c026a1e3-978f-4fac-b0b2-0b58440a6b19/otp' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "otp": "7863"
+}'
+```

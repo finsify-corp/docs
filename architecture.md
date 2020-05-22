@@ -6,12 +6,13 @@
 
 ### Webhook listen events
 
-- request.ready
-- request.running
-- request.failed
-- request.successful
-- merchant.progress
-- merchant.successful
+- request.ready: The request is received and on queue.
+- request.running: The request start running.
+- request.failed: Request failed.
+- request.successful: Request completed successful.
+- merchant.request: Request for otp, secret password
+- merchant.progress: Current state of the crawler.
+- merchant.successful: Crawler completed successful.
 
 ### Router listen events
 

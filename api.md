@@ -52,7 +52,7 @@
 - First time user should be: `type`: `manual` and `only_get_accounts`: `true`. 
 - Return user should be: `type`: `auto`, `only_get_accounts`: `false`, `filter_accounts`: [`sample-account-id`]
 
-Sample:
+Sample data:
 
 ```javascript
 {
@@ -64,22 +64,40 @@ Sample:
 }
 ```
 
+Sample unencrypted data request:
+
+```bash
+curl -X POST 'https://trial-api.finsify.com/api/request' \
+--header 'Content-Type: application/json' \
+--header 'x-customer-id: 121321312' \
+--header 'X-CLIENT-ID: f43568ab' \
+--header 'Content-Type: application/json' \
+--header 'encrypted: 0' \
+--data-raw '{
+    "data": {
+        "credentials": {
+            "username": "xxxxxxxx",
+            "password": "xxxxxxxx"
+        },
+        "service_id": 249,
+        "callback_url": "https://en0owazxol4fum.x.pipedream.net",
+        "only_get_accounts": false,
+        "type": "auto"
+    }
+}'
+```
+
 Sample encrypted data request:
 
 ```bash
-curl -X POST \
-  https://dev-toss.integrated.finsify.com/api/request \
-  -H 'Accept: */*' \
-  -H 'Accept-Encoding: gzip, deflate' \
-  -H 'Cache-Control: no-cache' \
-  -H 'Connection: keep-alive' \
-  -H 'Content-Length: 733' \
-  -H 'Content-Type: application/json' \
-  -H 'Host: dev-toss.integrated.finsify.com' \
-  -H 'cache-control: no-cache' \
-  -H 'encrypted: 1' \
-  -d '{
-"data": "0f0990a27e153b5fd26581d3f317e4c35e8a741138fb3c0633f818f1eb8f299c9bcb019351da22fae0d5f06178f144477951a14f2c14ed4aa2f7ba1ca689dfb040b04e755bf51426a0e93403a084379af692c602f7889b5cf1b26ece0edf917d2e87f3bd887a80eba4f79f92f9b014b7fe07b2ce88c6bdd43047f86bd0d02d45aff9382700f6846b96a2cb3adf84e2d6a4e168ec7cc012672600b1f910e8ba0029ad4922eb1b01048f313c87c2be184635ae309481",
+curl -X POST 'https://trial-api.finsify.com/api/request' \
+--header 'Content-Type: application/json' \
+--header 'x-customer-id: 121321312' \
+--header 'X-CLIENT-ID: f43568ab' \
+--header 'Content-Type: application/json' \
+--header 'encrypted: 1' \
+--data-raw '{
+"data": "0f0990a27e153b5fd26581d3f317e4c35e8a741138fb3c0633f818f1eb8f299c9bcb019351da22fae0d5f06178f144477951a14f2c14ed4aa2f7ba1ca689dfb040b04e755bf51426a0e93403a084379af692c602f7889dj84n3uedf917d2e87f3bd887a80eba4f79f92f9b014b7fe07b2ce88c6bdd43047f86bd0d02d45aff9382700f6846b96a2cb3adf84e2d6a4e168ec7cc012672600b1f910e8ba0029ad4922eb1b01048f313c87c2be184635ae309481",
 "key": "L5NqVfGdwAD10jvXUIqRDf3X8gMDTAENABDzWxj4NSXCeEURWc53HHzqylmvvExdvvYX0aFVa38IH4vk1qbQT3Cuv9HFPC477WTrrj+o9+2+Qn5TbS1WpNzboHwOl3wz1x9Om4TH78hwNkY8dH5LYyKe4GpEc8zsDYhF8+rOZe+GQjX8lWhZJ4pr+bkuc0nLvEyAwCfU3pEQuIIRfFdgvMGnnXr5+4XSntTBDQ60k/ctkIwSpvsZ1fcwdSG70PmcK6vX+Iq+ZEPkKVjR2hBshX21f0jGZ3Yxnu343cgnqFiHIEHbZiPD+cuNUe5PmDWcIcz8IT+ccyExSfBsl1dNPQ=="
 }'
 ```
@@ -165,29 +183,25 @@ Sample unencrypted on test server:
 
 ```bash
 curl --location --request PUT 'https://trial-api.finsify.com/api/request/9763e0c1-250b-4542-93d3-7d61987551c0/otp' \
---header 'X-CLIENT-ID: c1759de2' \
+--header 'X-CLIENT-ID: f43568ab' \
 --header 'x-customer-id: 001' \
 --header 'encrypted: 0' \
 --header 'Content-Type: application/json' \
---data-raw '{
+--data-raw '{"data": {
  "otp": "1234"
-}'
+}}'
 ```
 
 Sample encrypted data request:
 
 ```bash
 curl --location --request PUT 'https://trial-api.finsify.com/api/request/9763e0c1-250b-4542-93d3-7d61987551c0/otp' \
-  -H 'Accept: */*' \
-  -H 'Accept-Encoding: gzip, deflate' \
-  -H 'Cache-Control: no-cache' \
-  -H 'Connection: keep-alive' \
-  -H 'Content-Length: 733' \
-  -H 'Content-Type: application/json' \
-  -H 'Host: dev-toss.integrated.finsify.com' \
-  -H 'cache-control: no-cache' \
-  -H 'encrypted: 1' \
-  -d '{
+--header 'X-CLIENT-ID: f43568ab' \
+--header 'x-customer-id: 001' \
+--header 'encrypted: 0' \
+--header 'Content-Type: application/json' \
+--header 'encrypted: 1' \
+--data-raw '{
 "data": "0f0990a27e153b5fd26581d3f317e4c35e8a741138fb3c0633f818f1eb8f299c9bcb019351da22fae0d5f06178f144477951a14f2c14ed4aa2f7ba1ca689dfb040b04e755bf51426a0e93403a084379af692c602f7889bd3345345345",
 "key": "L5NqVfGdwAD10jvXUIqRDf3X8gMDTAENABDzWxj4NSXCeEURWc53HHzqylmvvExdvvYX0aFVa38IH4vk1qbQT3Cuv9HFPC477WTrrj+o9+2+Qn5TbS1WpNzboHwOl3wz1x9Om4TH78hwNkY8dH5LYyKe4GpEc8zsDYhF8+rOZe+GQjX8lWhZJ4pr+bkuc0nLvEyAwCfU3pEQuIIRfFdgvMGnnXr5+4XSntTBDQ60k/ctkIwSpvsZ1fcwdSG70PmcK6vX+Iq+ZEPkKVjR2hBshX21f0jGZ3Yxnu343cgnqFiHIEHbZiPD+cuNUe5PmDWcIcz8IT+ccyExSfBsl1dNPQ=="
 }'

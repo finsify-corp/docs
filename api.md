@@ -138,9 +138,9 @@ curl -X POST 'https://trial-api.finsify.com/api/request' \
 | request.failed | Not successful getting data, "error" will be return below. |
 | request.successful | Successful getting data, "data" will be return below, this is the final webhook on the request_id. |
 | merchant.progress | State of the crawler changed, see "progress" for more info. Tasks may include:<br /> - login, account<br /> - filter-account<br /> - skip-transaction-task<br /> - transaction. |
+| merchant.request | Request for otp, secret password |
 | merchant.successful | All the task above is completed. |
 | request.successful | Task completed, you can received data in this event|
-
 
 #### Data sample
 

@@ -164,11 +164,13 @@ curl -X POST 'https://trial-api.finsify.com/api/request' \
 
 ```json
 {
-    "request_id": "9763e0c1-250b-4542-93d3-7d61987551c0",
-    "event": "merchant.request",
-    "progress": {
-        "task": "otp"
-    }
+   "request_id": "58ebfe46-6b90-402d-a6b1-2a6ed135bfe7",
+   "event": "merchant.request",
+   "progress": {
+      "task": "otp",
+      "message": "Chúng tôi nhận thấy đây là lần đầu tiên bạn đăng nhập thiết bị này.Sau khi bạn nhập OTP, thiết bị này sẽ được thêm vào danh sách các thiết bị được phê duyệt",
+      "expiredAt": 1590393589
+   }
 }
 ```
 

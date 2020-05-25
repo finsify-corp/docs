@@ -443,11 +443,17 @@ curl -X DELETE \
 
 ### Body
 
+| Key | Type | Description |
+|-----|------|-------------|
+| otp | String | OTP code |
+| retry | Boolean | Value set to `true`, can make a action re-send OTP code  |
+
 Encrypted using the same method as above. sample unencrypt data:
 
 ```
 {
- "otp": "1234"
+ "otp": "1234",
+ "retry": false
 }
 ```
 
@@ -462,7 +468,8 @@ curl --location --request PUT 'https://trial-api.finsify.com/api/request/9763e0c
 --header 'encrypted: 0' \
 --header 'Content-Type: application/json' \
 --data-raw '{"data": {
- "otp": "1234"
+ "otp": "1234",
+ "retry": true
 }}'
 ```
 

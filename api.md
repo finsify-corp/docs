@@ -29,7 +29,7 @@
 |---|---|---|---|
 | encrypted	| string | ON DEV SERVER ONLY. Set value is “1” for enable encrypted. | Yes |
 | x-client-id | string | Provided by Finsify. | Yes |
-| Content-Type | string | Unique code to identify your customer. | Yes |
+| x-customer-id | string | Unique code to identify your customer. | Yes |
 
 #### Body
 
